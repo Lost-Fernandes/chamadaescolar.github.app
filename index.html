@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Chamada Completo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div id="dataDia" class="data-dia">
+    <!-- Data e dia da semana serão gerados dinamicamente -->
+  </div>
+  <h2>Sistema de Chamada de Alunos</h2>
+
+  <div class="form-section">
+    <input type="text" id="nomeAluno" placeholder="Nome do aluno">
+    <input type="text" id="serieAluno" placeholder="Série do aluno">
+    <button onclick="adicionarAluno()">Adicionar Aluno</button>
+  </div>
+
+  <div id="listaAlunos">
+    <!-- Lista de alunos será gerada aqui -->
+  </div>
+
+  <div class="actions">
+    <button onclick="salvarDados()">Salvar Presenças</button>
+    <button onclick="gerarRelatorio()">Gerar Relatório</button>
+    <button onclick="exportarPDF()">Exportar para PDF</button>
+  </div>
+
+  <div id="relatorio" class="relatorio">
+    <!-- Relatório será exibido aqui -->
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
